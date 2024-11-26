@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Compassionate Hand Community Initiative</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/prettyPhoto.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Nova+Flat' rel='stylesheet' type='text/css' />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/project.css"> 
+
+</head>
+<body>
+    <div id="pre-div">
+        <div id="loader"></div>
+    </div>
+    <div id="home" class="navbar navbar-default move-me">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo-container">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/realimg/comp-Photoroom.png" class="navbar-brand-logo" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">HOME <i class="fa fa-bars"></i></a></li>
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US <i class="fa fa-bars"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="who.html">WHO WE ARE</a></li>
+                            <li><a href="mission.html">OUR MISSION</a></li>
+                            <li><a href="programs.html">OUR PROGRAMS</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="new.html">NEWS & PRESS <i class="fa fa-bars"></i></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">GET INVOLVED <i class="fa fa-bars"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="donate.html">DONATE</a></li>
+                            <li><a href="volunteer.html">VOLUNTEER</a></li>
+                            <li><a href="fund.html">FUNDRAISE</a></li>
+                            <li><a href="partner.html">COOPERATE PARTNERSHIP AND COLLABORATION</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="project.html">PROJECTS <i class="fa fa-bars"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="footer-container">
+        <ul class="nav contact-info">
+            <li><a href="mailto:danombija1000@gmail.com"><i class="fa fa-envelope-o"></i> danombija1000@gmail.com</a></li>
+            <li><a href="tel:+254792568190"><i class="fa fa-phone"></i> +254 792 568 190</a></li>
+            <li><a href="http://www.compassionatehand.com"><i class="fa fa-globe"></i> www.compassionatehand.com</a></li>
+        </ul>
+        <div class="copy">
+            <strong>Compassionate Hands</strong> © <span id="copyright-year"></span> 
+            | <a href="#">Privacy Policy</a> <br>
+            Website designed by Cornel
+        </div>  
+    </div>
+</footer> 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const donationButtons = document.querySelectorAll('.donation-amounts button');
+          const donateButton = document.querySelector('.donate-button');
+          const otherButton = document.getElementById('other-button');
+          const customAmountContainer = document.getElementById('custom-amount-container');
+          const customAmountInput = document.getElementById('custom-amount-input');
+          const setCustomAmountButton = document.getElementById('set-custom-amount');
+          let selectedAmount = "$200"; // Default selected amount
+  
+          // Add click event to each donation button
+          donationButtons.forEach(button => {
+              button.addEventListener('click', function() {
+                  // Remove 'selected' class from all buttons
+                  donationButtons.forEach(btn => btn.classList.remove('selected'));
+                  // Add 'selected' class to clicked button
+                  button.classList.add('selected');
+                  // Hide custom amount container if it's shown
+                  customAmountContainer.style.display = 'none';
+                  // Update the selected amount for preset buttons
+                  selectedAmount = button.textContent;
+                  // Update the donate button text
+                  donateButton.textContent = `DONATE ${selectedAmount}`;
+              });
+          });
+  
+          // Add click event to the "Other" button
+          otherButton.addEventListener('click', function() {
+              // Remove 'selected' class from all buttons
+              donationButtons.forEach(btn => btn.classList.remove('selected'));
+              // Add 'selected' class to "Other" button
+              otherButton.classList.add('selected');
+              // Show custom amount container
+              customAmountContainer.style.display = 'flex';
+              // Focus on the input field
+              customAmountInput.focus();
+          });
+  
+          // Add click event to set custom amount button
+          setCustomAmountButton.addEventListener('click', function() {
+              const customAmount = customAmountInput.value.trim();
+              if (customAmount && !isNaN(customAmount) && customAmount > 0) {
+                  // Update the selected amount to custom amount
+                  selectedAmount = `$${customAmount}`;
+                  // Update the donate button text
+                  donateButton.textContent = `DONATE ${selectedAmount}`;
+                  // Hide custom amount container
+                  customAmountContainer.style.display = 'none';
+                  // Reset input field
+                  customAmountInput.value = '';
+              } else {
+                  alert("Please enter a valid amount.");
+              }
+          });
+  
+          // Add click event to the donate button
+          donateButton.addEventListener('click', function() {
+              alert(`Thank you for your donation of ${selectedAmount}!`);
+          });
+      });
+  </script>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.prettyPhoto.js"></script>
+    <script src="assets/js/jquery.knob.js"></script>
+    <script src="assets/js/scrollReveal.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
