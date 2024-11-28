@@ -86,14 +86,11 @@
         </div>
         <input type="submit" value="DONATE" class="donate-button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
       </form>
-      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">See More</button>
-      <div class="project-details">
-        <p>This project aims to build homes for families in need. We believe everyone deserves a safe and stable place to live. Your donation will help us provide shelter, security, and hope for those who need it most.</p>
-      </div>
+      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;" onclick="openProjectPage('homeForEveryHeart')">See More</button>
     </div>
   
     <div class="project-card">
-      <img src="assets/img/projects/train farmers.jpg" alt="Equipping Farmers for a Better Future">
+      <img src="assets/img/projects/train_farmers.jpg" alt="Equipping Farmers for a Better Future">
       <h3>Equipping Farmers for a Better Future</h3>
       <div class="progress-bar">
         <div class="progress" style="width: 66.47%;"></div>
@@ -109,13 +106,11 @@
         </div>
         <input type="submit" value="DONATE" class="donate-button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
       </form>
-      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">See More</button>
-      <div class="project-details">
-        <p>We are empowering farmers with the tools and knowledge they need to thrive. By providing training, resources, and support, we're helping to create a more sustainable and equitable food system.</p>
-      </div>
+      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;" onclick="openProjectPage('farmersProject')">See More</button>
     </div>
   
     <div class="project-card">
+      <img src="assets/img/projects/healthcare_project.jpg" alt="Healthcare for All">
       <h3>Healthcare for All</h3>
       <p>Provide basic healthcare to remote areas.</p>
       <div class="progress-bar">
@@ -132,58 +127,34 @@
         </div>
         <input type="submit" value="DONATE" class="donate-button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
       </form>
-      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">See More</button>
-      <div class="project-details">
-        <p>Access to healthcare is a fundamental human right. We are working to bring essential medical services to underserved communities, ensuring that everyone has the opportunity to live a healthy life.</p>
-      </div>
+      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;" onclick="openProjectPage('healthcareProject')">See More</button>
     </div>
   
     <div class="project-card">
-      <h3>Programs for Persons with Disabilities</h3>
+      <img src="assets/img/projects/education_project.jpg" alt="Education for All">
+      <h3>Education for All</h3>
+      <p>Provide education to children in underprivileged areas.</p>
       <div class="progress-bar">
-        <div class="progress" style="width: 72.5%;"></div>
+        <div class="progress" style="width: 60%;"></div>
       </div>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_donations">
         <input type="hidden" name="business" value="danombija1000@gmail.com">
         <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="item_name" value="Programs for Persons with Disabilities">
+        <input type="hidden" name="item_name" value="Education for All">
         <div class="donation-input-wrapper">
           <span class="currency-symbol">$</span>
           <input type="number" name="amount" placeholder="Enter amount" class="donation-input">
         </div>
         <input type="submit" value="DONATE" class="donate-button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
       </form>
-      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">See More</button>
-      <div class="project-details">
-        <p>We are committed to creating inclusive communities where everyone can thrive. Our programs provide support, education, and opportunities for people with disabilities, helping them to achieve their full potential.</p>
-      </div>
+      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;" onclick="openProjectPage('educationProject')">See More</button>
     </div>
   
     <div class="project-card">
-      <h3>Support for Domestic Violence Survivors</h3>
-      <div class="progress-bar">
-        <div class="progress" style="width: 33.33%;"></div>
-      </div>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_donations">
-        <input type="hidden" name="business" value="danombija1000@gmail.com">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="item_name" value="Support for Domestic Violence Survivors">
-        <div class="donation-input-wrapper">
-          <span class="currency-symbol">$</span>
-          <input type="number" name="amount" placeholder="Enter amount" class="donation-input">
-        </div>
-        <input type="submit" value="DONATE" class="donate-button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-      </form>
-      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">See More</button>
-      <div class="project-details">
-        <p>We provide a safe haven and comprehensive support services for survivors of domestic violence. Your donation will help us offer counseling, legal aid, shelter, and other essential resources to help survivors heal and rebuild their lives.</p>
-      </div>
-    </div>
-  
-    <div class="project-card">
-      <h3>Disaster Relief and Preparedness Training</h3>
+      <img src="assets/img/projects/water_project.jpg" alt="Clean Water for All">
+      <h3>Clean Water for All</h3>
+      <p>Provide access to clean and safe drinking water.</p>
       <div class="progress-bar">
         <div class="progress" style="width: 80%;"></div>
       </div>
@@ -191,19 +162,84 @@
         <input type="hidden" name="cmd" value="_donations">
         <input type="hidden" name="business" value="danombija1000@gmail.com">
         <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="item_name" value="Disaster Relief and Preparedness Training">
+        <input type="hidden" name="item_name" value="Clean Water for All">
         <div class="donation-input-wrapper">
           <span class="currency-symbol">$</span>
           <input type="number" name="amount" placeholder="Enter amount" class="donation-input">
         </div>
         <input type="submit" value="DONATE" class="donate-button" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
       </form>
-      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">See More</button>
-      <div class="project-details">
-        <p>We are dedicated to helping communities prepare for and recover from disasters. Your donation will support our efforts to provide emergency relief, rebuild infrastructure, and train individuals to respond effectively to crises.</p>
-      </div>
+      <button class="see-more-button" style="background-color: #0056b3; color: white; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;" onclick="openProjectPage('waterProject')">See More</button>
     </div>
   </div>
+  
+  <!-- Detailed Project Pages -->
+  <div id="homeForEveryHeart" class="project-detail-page" style="display:none; padding: 20px; background-color: #ffffff; border-radius: 8px; margin-top: 20px;">
+    <h2>Home for Every Heart - Detailed Information</h2>
+    <img src="assets/img/projects/home_for_every_heart_detail.jpg" alt="Home for Every Heart" style="width:100%; height:auto; border-radius: 8px;">
+    <p>This project aims to build homes for families in need. We believe everyone deserves a safe and stable place to live. Your donation will help us provide shelter, security, and hope for those who need it most.</p>
+    <p>We focus on building homes with sustainable materials and providing the families with the tools they need to maintain them. This is more than just providing a roof over someone's head – it's about offering hope for a brighter future.</p>
+    <a href="javascript:void(0);" onclick="closeProjectPage('homeForEveryHeart')" style="background-color: #d9534f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; cursor: pointer;">Close</a>
+  </div>
+  
+  <div id="farmersProject" class="project-detail-page" style="display:none; padding: 20px; background-color: #ffffff; border-radius: 8px; margin-top: 20px;">
+    <h2>Equipping Farmers for a Better Future - Detailed Information</h2>
+    <img src="assets/img/projects/farmers_project_detail.jpg" alt="Equipping Farmers for a Better Future" style="width:100%; height:auto; border-radius: 8px;">
+    <p>We are empowering farmers with the tools and knowledge they need to thrive. By providing training, resources, and support, we're helping to create a more sustainable and equitable food system.</p>
+    <p>This project helps farmers gain access to modern agricultural techniques, high-quality seeds, and the knowledge to increase their crop yields. Our goal is to build a more resilient food supply and improve the livelihoods of local farmers.</p>
+    <a href="javascript:void(0);" onclick="closeProjectPage('farmersProject')" style="background-color: #d9534f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; cursor: pointer;">Close</a>
+  </div>
+  
+  <div id="healthcareProject" class="project-detail-page" style="display:none; padding: 20px; background-color: #ffffff; border-radius: 8px; margin-top: 20px;">
+    <h2>Healthcare for All - Detailed Information</h2>
+    <img src="assets/img/projects/healthcare_project_detail.jpg" alt="Healthcare for All" style="width:100%; height:auto; border-radius: 8px;">
+    <p>Access to healthcare is a fundamental human right. We are working to bring essential medical services to underserved communities, ensuring that everyone has the opportunity to live a healthy life.</p>
+    <p>Our mobile healthcare units travel to remote areas to provide medical consultations, vaccinations, and health education to populations who otherwise wouldn't have access to these essential services. Your support will directly fund these efforts and save lives.</p>
+    <a href="javascript:void(0);" onclick="closeProjectPage('healthcareProject')" style="background-color: #d9534f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; cursor: pointer;">Close</a>
+  </div>
+  
+  <div id="educationProject" class="project-detail-page" style="display:none; padding: 20px; background-color: #ffffff; border-radius: 8px; margin-top: 20px;">
+    <h2>Education for All - Detailed Information</h2>
+    <img src="assets/img/projects/education_project_detail.jpg" alt="Education for All" style="width:100%; height:auto; border-radius: 8px;">
+    <p>This project aims to provide children in underprivileged areas with access to quality education. We provide schools with educational materials, qualified teachers, and infrastructure support.</p>
+    <p>Our goal is to break the cycle of poverty by giving children the tools they need to succeed in life. Your support will help provide these children with the opportunity to dream, learn, and achieve.</p>
+    <a href="javascript:void(0);" onclick="closeProjectPage('educationProject')" style="background-color: #d9534f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; cursor: pointer;">Close</a>
+  </div>
+  
+  <div id="waterProject" class="project-detail-page" style="display:none; padding: 20px; background-color: #ffffff; border-radius: 8px; margin-top: 20px;">
+    <h2>Clean Water for All - Detailed Information</h2>
+    <img src="assets/img/projects/water_project_detail.jpg" alt="Clean Water for All" style="width:100%; height:auto; border-radius: 8px;">
+    <p>Providing clean and safe drinking water to communities is a priority for us. We work with local organizations to build wells and install water filtration systems that provide clean water to those in need.</p>
+    <p>Access to clean water is essential for health and well-being. By supporting this project, you are helping to improve the lives of entire communities by ensuring they have a safe water source.</p>
+    <a href="javascript:void(0);" onclick="closeProjectPage('waterProject')" style="background-color: #d9534f; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; cursor: pointer;">Close</a>
+  </div>
+  
+  <script>
+    function openProjectPage(projectId) {
+      // Hide all project detail pages
+      var projectPages = document.querySelectorAll('.project-detail-page');
+      projectPages.forEach(function(page) {
+        page.style.display = 'none';
+      });
+  
+      // Show the selected project detail page
+      var projectPage = document.getElementById(projectId);
+      projectPage.style.display = 'block';
+      
+      // Scroll to the project detail section
+      window.scrollTo({
+        top: projectPage.offsetTop - 20, // Offset for padding/margins
+        behavior: 'smooth'
+      });
+    }
+  
+    function closeProjectPage(projectId) {
+      document.getElementById(projectId).style.display = 'none';
+    }
+  </script>
+  
+
+  
 
   <footer>
     <div class="footer-container">
@@ -246,15 +282,7 @@
         });
 
         // Toggle project details visibility
-        seeMoreButton.addEventListener('click', () => {
-          if (projectDetails.style.display === "none" || projectDetails.style.display === "") {
-            projectDetails.style.display = "block";
-            seeMoreButton.textContent = "See Less"; 
-          } else {
-            projectDetails.style.display = "none";
-            seeMoreButton.textContent = "See More"; 
-          }
-        });
+
       });
     });
   </script>
