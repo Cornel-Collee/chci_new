@@ -174,62 +174,45 @@
         }
       </style>
       
-<script>
-  const apiKey = "4139c6ccb7c943dda77e470e7fde76a4";
+      <script>
+      const apiKey = "a24d9a51948cd5cada6cb60b736f8d7a";
 
-  async function fetchCharityNews() {
-    const apiUrl = `https://newsapi.org/v2/everything?q=(charity+OR+humanitarian+aid)+(Kenya+OR+Africa)&apiKey=${apiKey}`;
-
-    try {
-      const response = await fetch(apiUrl, { 
-        mode: 'cors', 
-        cache: 'no-cache' 
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      const articles = data.articles || [];
-      const newsSection = document.getElementById("dynamic-news-section");
-      newsSection.innerHTML = "";
-
-      if (articles.length === 0) {
-        newsSection.innerHTML = "<p>No recent news found. Please check back later.</p>";
-        return;
-      }
-
-      const processedArticles = new Set();
-
-      articles.forEach((article) => {
-        if (article.urlToImage && !processedArticles.has(article.title)) {
-          const articleElement = document.createElement("article");
-          articleElement.innerHTML = `
-            <img src="${article.urlToImage}" alt="${article.title}" loading="lazy">
-            <h3>${article.title}</h3>
-            <p>${article.description || 'No description available.'}</p>
-            <a href="${article.url}" target="_blank" rel="noopener noreferrer">Read More</a>
-          `;
-          newsSection.appendChild(articleElement);
-          processedArticles.add(article.title);
+      async function fetchCharityNews() {
+        const apiUrl = `http://api.mediastack.com/v1/news?access_key=${apiKey}&keywords=charity,humanitarian aid&countries=ke,ng,za&languages=en&limit=10`;
+      
+        try {
+          const response = await fetch(apiUrl);
+          if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+          const data = await response.json();
+      
+          const articles = data.data || [];
+          const newsSection = document.getElementById("dynamic-news-section");
+          newsSection.innerHTML = "";
+      
+          if (articles.length === 0) {
+            newsSection.innerHTML = "<p>No recent news found. Please check back later.</p>";
+            return;
+          }
+      
+          articles.forEach((article) => {
+            const articleElement = document.createElement("article");
+            articleElement.innerHTML = `
+              <img src="${article.image || 'placeholder-image-url.jpg'}" alt="${article.title}" loading="lazy">
+              <h3>${article.title}</h3>
+              <p>${article.description || 'No description available.'}</p>
+              <a href="${article.url}" target="_blank" rel="noopener noreferrer">Read More</a>
+            `;
+            newsSection.appendChild(articleElement);
+          });
+        } catch (error) {
+          console.error("Error fetching news:", error.message);
+          const newsSection = document.getElementById("dynamic-news-section");
+          newsSection.innerHTML = "<p>Unable to fetch news. Please try again later.</p>";
         }
-      });
-    } catch (error) {
-      console.error("Error fetching news:", error.message);
-
-      const newsSection = document.getElementById("dynamic-news-section");
-      newsSection.innerHTML = `
-        <p>
-          Unable to fetch news at the moment. Please ensure your internet connection is stable or try again later.
-        </p>
-      `;
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", fetchCharityNews);
-</script>
+      }
+      
+      document.addEventListener("DOMContentLoaded", fetchCharityNews);
+    </script> 
 
              
     <!-- Footer Section -->
